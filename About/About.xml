@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData xmlns="rimworld.schemas.modMetaData">
+  <packageId>trollam.SpecializedReplacementLimbs</packageId>
+  <name>[TRM] Specialized Replacement Limbs</name>
+  <author>Trollam</author>
+  <modVersion>1.0</modVersion>
+  <url>https://github.com/Trollam/EliteBionicFrameworkPatches</url>
+  <description>Add recipes to keep specialized limbs relevant alongs with better limbs replacement.</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>V1024.EBFramework</li>
+  </loadAfter>
+</ModMetaData>

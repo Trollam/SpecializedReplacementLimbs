@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <!-- Bionic Power Arm -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>TRM_BionicPowerArm</defName>
+    <label>bionic power arm</label>
+    <labelNoun>a bionic power arm</labelNoun>
+    <description>An installed bionic power arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TRM_BionicPowerArm</ThingDef>
+    </descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.04</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>claw</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>22</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
+            <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+        <scaleAdjustment>0.25</scaleAdjustment>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>TRM_BionicPowerArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>TRM_BionicPowerArm</defName>
+    <label>bionic power arm</label>
+    <description>An advanced artificial arm designed for enhanced combat efficiency.
+      Silenced mini-servos provide remarkable strength, and the biogel nerve-link ensures precise control.
+      The lattice-dust healing system enables rapid recovery from damage, making it superior to a biological arm in almost every way.
+      This combat-oriented arm replacement, designed for versatility, features a mechanical hand with hooked claws on each finger.
+      Its formidable cutting strength and crushing force make it highly effective in combat, yet the retractable claws allow for non-combat tasks.
+      Additionally, it features a versatile manipulator for general-purpose use.
+      While its design retains some element of ungainliness, the impact on movement has been significantly minimized.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>TRM_InstallBionicPowerArm</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <BionicArm>1</BionicArm>
+      <PowerClaw>1</PowerClaw>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>6</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>TRM_InstallBionicPowerArm</defName>
+    <label>install bionic power arm</label>
+    <description>Install a bionic power arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TRM_BionicPowerArm</ThingDef>
+      <HediffDef>TRM_BionicPowerArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic power arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TRM_BionicPowerArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>TRM_BionicPowerArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>TRM_BionicPowerArm</addsHediff>
+  </RecipeDef>
+</Defs>

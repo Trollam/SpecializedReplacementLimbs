@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <!-- Bionic Drill Arm -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>TRM_BionicDrillArm</defName>
+    <label>bionic drill arm</label>
+    <labelNoun>a bionic drill arm</labelNoun>
+    <description>An installed bionic drill arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TRM_BionicDrillArm</ThingDef>
+    </descriptionHyperlinks>
+    <stages>
+      <li>
+        <statOffsets>
+          <!--
+            Reduced values by 12.5%, rounded to nearest.
+            With the partEfficiency increase of 25% it results in a net gain of ~ 9.375%.
+          -->
+          <!-- 1.60 * 0.875-->
+          <MiningSpeed>1.40</MiningSpeed>
+          <!-- 0.7 * 0.875-->
+          <DeepDrillingSpeed>0.61</DeepDrillingSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.04</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>drill</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>13</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>MeleeHit_DrillArm</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_DrillArm</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+        <scaleAdjustment>0.25</scaleAdjustment>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>TRM_BionicDrillArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>TRM_BionicDrillArm</defName>
+    <label>bionic drill arm</label>
+    <description>An advanced artificial arm designed for enhanced mining efficiency.
+      Silenced mini-servos provide remarkable strength, and the biogel nerve-link ensures precise control.
+      The lattice-dust healing system enables rapid recovery from damage, making it superior to a biological arm in almost every way.
+      This specialized artificial arm, an amalgamation of cutting-edge technologies, is tailored to expedite mining tasks.
+      Equipped with a built-in snake drill for efficient rock exploitation.
+      Additionally, it features a versatile manipulator for general-purpose use.
+      While its design retains some element of ungainliness, the impact on movement has been significantly minimized.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>TRM_InstallBionicDrillArm</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <BionicArm>1</BionicArm>
+      <DrillArm>1</DrillArm>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+    </recipeMaker>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>6</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>TRM_InstallBionicDrillArm</defName>
+    <label>install bionic drill arm</label>
+    <description>Install a bionic drill arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TRM_BionicDrillArm</ThingDef>
+      <HediffDef>TRM_BionicDrillArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic drill arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TRM_BionicDrillArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>TRM_BionicDrillArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>TRM_BionicDrillArm</addsHediff>
+  </RecipeDef>
+
+  <!-- Bionic Field Arm -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>TRM_BionicFieldArm</defName>
+    <label>bionic field arm</label>
+    <labelNoun>a bionic field arm</labelNoun>
+    <description>An installed bionic field arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TRM_BionicFieldArm</ThingDef>
+    </descriptionHyperlinks>
+    <stages>
+      <li>
+        <statOffsets>
+          <!--
+            Reduced values by 12.5%, rounded to nearest.
+            With the partEfficiency increase of 25% it results in a net gain of ~ 9.375%.
+          -->
+          <!-- 1.60 * 0.875-->
+          <PlantWorkSpeed>1.40</PlantWorkSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.04</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>false</alwaysTreatAsWeapon>
+            <soundMeleeHit>MeleeHit_FieldHand</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_FieldHand</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+        <scaleAdjustment>0.25</scaleAdjustment>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>TRM_BionicFieldArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>TRM_BionicFieldArm</defName>
+    <label>bionic field arm</label>
+    <description>An advanced artificial arm designed for enhanced agricultural efficiency.
+      Silenced mini-servos provide remarkable strength, and the biogel nerve-link ensures precise control.
+      The lattice-dust healing system enables rapid recovery from damage, making it superior to a biological arm in almost every way.
+      This specialized artificial arm, an amalgamation of cutting-edge technologies, is tailored to accelerate both sowing and harvesting tasks for farmers.
+      Its multiple telescoping finger-like protrusions allow simultaneous harvesting from several points on the same plant or the precise sowing of multiple holes.
+      Additionally, it features a versatile manipulator for general-purpose use.
+      While its design retains some element of ungainliness, the impact on movement has been significantly minimized.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>TRM_InstallBionicFieldArm</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <BionicArm>1</BionicArm>
+      <FieldHand>1</FieldHand>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+    </recipeMaker>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>6</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>TRM_InstallBionicFieldArm</defName>
+    <label>install bionic field arm</label>
+    <description>Install a bionic field arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TRM_BionicFieldArm</ThingDef>
+      <HediffDef>TRM_BionicFieldArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing bionic field arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TRM_BionicFieldArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>TRM_BionicFieldArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>TRM_BionicFieldArm</addsHediff>
+  </RecipeDef>
+</Defs>

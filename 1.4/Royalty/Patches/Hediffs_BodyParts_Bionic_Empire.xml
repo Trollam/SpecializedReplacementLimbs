@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="TRM_BionicPowerArm"]</xpath>
+    <value>
+      <recipeMaker>
+        <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+      </recipeMaker>
+    </value>
+  </Operation>
+</Patch>

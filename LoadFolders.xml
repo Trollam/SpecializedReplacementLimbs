@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<loadFolders xmlns="rimworld.schemas.loadFolders">
+  <v1.4>
+    <li>/</li>
+    <li>1.4/Core</li>
+    <li IfModActive="Ludeon.RimWorld.Royalty">1.4/Royalty</li>
+  </v1.4>
+</loadFolders>
