@@ -46,7 +46,7 @@
           </li>
         </tools>
       </li>
-      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust" MayRequire="V1024.EBFramework">
         <scaleAdjustment>0.25</scaleAdjustment>
       </li>
     </comps>
@@ -164,7 +164,7 @@
           </li>
         </tools>
       </li>
-      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust" MayRequire="V1024.EBFramework">
         <scaleAdjustment>0.25</scaleAdjustment>
       </li>
     </comps>
